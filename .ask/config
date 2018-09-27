@@ -1,7 +1,7 @@
 {
   "deploy_settings": {
     "default": {
-      "skill_id": "",
+      "skill_id": "amzn1.ask.skill.79deab56-8b03-41bc-b7ff-306132399f36",
       "was_cloned": false,
       "merge": {
         "manifest": {
@@ -13,6 +13,36 @@
             }
           }
         }
+      },
+      "resources": {
+        "manifest": {
+          "eTag": "671f187c71f13e92767edd4d282ebc28"
+        },
+        "interactionModel": {
+          "en-GB": {
+            "eTag": "f13cb9cb14a6882b42acddeffa755cd5"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:eu-west-1:963778699255:function:BasicEchoAlexaLambda",
+            "functionName": "BasicEchoAlexaLambda",
+            "awsRegion": "eu-west-1",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "73f25ddf-b04c-43fb-bcd5-797323e8e07f"
+          },
+          {
+            "arn": "arn:aws:lambda:us-east-1:963778699255:function:ask-custom-SayHello-default",
+            "functionName": "arn:aws:lambda:us-east-1:963778699255:function:ask-custom-SayHello-default",
+            "awsRegion": "us-east-1",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "c8adc8e7-9f5d-4b47-9677-c4e4e854b29d"
+          }
+        ]
       }
     }
   }
