@@ -1,0 +1,85 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "say hello",
+          "intents": [
+              {
+                  "name": "AMAZON.FallbackIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "getusersname",
+                  "slots": [
+                      {
+                          "name": "name",
+                          "type": "AMAZON.GB_FIRST_NAME",
+                          "samples": [
+                              "{name}",
+                              "my name is {name}"
+                          ]
+                      }
+                  ],
+                  "samples": [
+                      "i am called {name}",
+                      "my name is {name}"
+                  ]
+              }
+          ],
+          "types": []
+      },
+      "dialog": {
+          "intents": [
+              {
+                  "name": "getusersname",
+                  "confirmationRequired": true,
+                  "prompts": {
+                      "confirmation": "Confirm.Intent.1140239409054"
+                  },
+                  "slots": [
+                      {
+                          "name": "name",
+                          "type": "AMAZON.GB_FIRST_NAME",
+                          "confirmationRequired": false,
+                          "elicitationRequired": true,
+                          "prompts": {
+                              "elicitation": "Elicit.Slot.1140239409054.881665851155"
+                          }
+                      }
+                  ]
+              }
+          ]
+      },
+      "prompts": [
+          {
+              "id": "Confirm.Intent.1140239409054",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "so your name is {name}"
+                  }
+              ]
+          },
+          {
+              "id": "Elicit.Slot.1140239409054.881665851155",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "please tell me your name"
+                  }
+              ]
+          }
+      ]
+  }
+}
