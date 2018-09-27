@@ -11,4 +11,6 @@ phases:
       - npm run build-aws-resource
 artifacts:
   files:
+    - lambda/custom/template.yaml
+    - lamda/custom/AppSpec.yml
     - lambda/custom/BasicAlexaEchoHello.zip
