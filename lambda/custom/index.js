@@ -1,7 +1,7 @@
 /* eslint-disable  func-names */
 /* eslint-disable  no-console */
 
-const Alexa = require('ask-sdk');
+const Alexa = require('ask-sdk-core');
 
 const LauncherHandler = {
   canHandle(handlerInput) {
@@ -99,7 +99,7 @@ const HELP_REPROMPT = 'Please say your name again';
 const STOP_MESSAGE = 'Goodbye!';
 
 
-const skillBuilder = Alexa.SkillBuilders.standard();
+const skillBuilder = Alexa.SkillBuilders.custom();
 
 exports.handler = skillBuilder
   .addRequestHandlers(
