@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - printenv
+      - cd lambda/custom && npm install
+  build:
+    commands:
+      - npm test
+      - npm run build-aws-resource
+artifacts:
+  files:
+    - lambda/custom/BasicAlexaEchoHello.zip
