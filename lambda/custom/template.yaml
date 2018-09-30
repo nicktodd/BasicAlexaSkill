@@ -7,10 +7,9 @@ Resources:
   AlexaSkillFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: .
       Handler: index.handler
-      #Runtime: nodejs4.3
       Runtime: nodejs8.10
+      CodeUri: s3://builds.conygre.com/BasicAlexaEchoApp.zip
       Events:
         AlexaSkillEvent:
           Type: AlexaSkill

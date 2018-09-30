@@ -1,0 +1,17 @@
+# serverless.yml
+
+service: AlexaHelloEchoService
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+
+functions:
+  app:
+    handler: index.handler # reference the file and exported method
+    events: # events trigger lambda functions
+      - alexaSkill: amzn1.ask.skill.79deab56-8b03-41bc-b7ff-306132399f36
+          
+# check out https://dev.to/adnanrahic/how-to-deploy-a-nodejs-application-to-aws-lambda-using-serverless-2nc7
