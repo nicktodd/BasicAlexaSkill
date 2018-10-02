@@ -7,3 +7,5 @@ RUN mkdir build
 RUN npm test
 RUN npm run build-aws-resource
 CMD ["cp", "BasicAlexaEchoHello.zip", "build"]
+
+
