@@ -1,6 +1,12 @@
 #!/usr/bin/env groovy
 pipeline {
-  agent any
+    agent {
+        docker {
+          reuseNode true
+          image "node"
+          
+        }
+      }
   options { skipDefaultCheckout()
             disableConcurrentBuilds()
           }
