@@ -12,6 +12,6 @@ it("should return hello Nick if Nick is the name provided", async () => {
   payload = await alexa.utter("my name is Nick"); //.then((payload) => {
   console.log("OutputSpeech: " + payload.response.outputSpeech.ssml);
   expect(payload.response.outputSpeech.ssml.toLowerCase()).toContain(
-    "hello Nick"
+    "hello nick"
   );
 });
